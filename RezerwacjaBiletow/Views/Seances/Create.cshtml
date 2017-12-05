@@ -1,0 +1,51 @@
+﻿@model RezerwacjaBiletow.Models.Seance
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout_Managment.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Seance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID_CinemaHall" class="control-label"></label>
+                <input asp-for="ID_CinemaHall" class="form-control" />
+                <span asp-validation-for="ID_CinemaHall" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Movie" class="control-label"></label>
+                <input asp-for="ID_Movie" class="form-control" />
+                <span asp-validation-for="ID_Movie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartingTime" class="control-label"></label>
+                <input asp-for="StartingTime" class="form-control" />
+                <span asp-validation-for="StartingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Cinema" class="control-label"></label>
+                <input asp-for="ID_Cinema" class="form-control" />
+                <span asp-validation-for="ID_Cinema" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

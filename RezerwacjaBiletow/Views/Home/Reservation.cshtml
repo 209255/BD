@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Reservation";
+}
+
+<h2>@ViewData["MovieId"]</h2>
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/jquery.datepick.css" />
+    <link rel="stylesheet" href="~/css/reservation.css" />
+    <script src="~/js/jquery.plugin.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.datepick.js" asp-append-version="true"></script>
+    <script src="~/js/reservation.js" asp-append-version="true"></script>
+</environment>
+
+
+<!--	<div style=" float: left; ">Wybierz datę seansu. </div> -->
+
+<div id="inlineDatepicker" class="data"></div>
+<div style="clear: both;"></div>
+
+<!--<div class="tytul">
+    Tu będzie tytuł, typ itd.
+</div>-->
+
+<div class="godziny">
+    <h2>Wybierz godzinę seansu:</h2>
+    <ul id="czas_seansu">
+        <li><input type="button" required="true" value="9:00" disabled="true" /></li>
+        <li><input type="button" required="true" value="11:00" disabled="true" /></li>
+        <li><input type="button" required="true" value="14:00" disabled="true" /></li>
+        <li><input type="button" required="true" value="17:00" disabled="true" /></li>
+        <li><input type="button" required="true" value="19:00" disabled="true" /></li>
+        <li><input type="button" required="true" value="21:00" disabled="true" /></li>
+    </ul>
+</div>
+
+<div style="font-style: italic; margin: 20px; clear: both;"><h2> Wybierz miejsca jakie chcesz zarezerwować:</h2></div>
+<div id="holder">
+    <ul id="place"></ul>
+</div>
+<div style="float:left;">
+    <ul id="seatDescription">
+        <li style="background:url('/images/available_seat_img.gif') no-repeat scroll 0 0 transparent;">Wolne miejsce</li>
+        <li style="background:url('/images/booked_seat_img.gif') no-repeat scroll 0 0 transparent;">Zajęte miejsce</li>
+        <li style="background:url('/images/selected_seat_img.gif') no-repeat scroll 0 0 transparent;">Wybrane miejsce</li>
+    </ul>
+</div>
+<div class="dane" style="clear:both; margin-left: 40px; ">
+    <input type="button" id="potwierdz" value="Potwierdź" />
+    <!--<input type="button" id="btnShowNew" value="Show Selected Seats" />
+    <input type="button" id="btnShow" value="Show All" />           -->
+</div>
